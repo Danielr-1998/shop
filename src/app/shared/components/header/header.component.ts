@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
     <a [routerLink]="['/']"> <span>My Store </span> </a>
    
     <span class='spacer'></span>
-    <app-cart (click)="goToCheckout()"></app-cart>
+    <app-cart class="mouseHover" (click)="goToCheckout()"></app-cart>
     
   </mat-toolbar>
 
