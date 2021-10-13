@@ -1,6 +1,6 @@
 
 <div class="container">
-    <form class="form item">
+    <form class="form item" (ngsubmit)="onSubmit()" #checkoutForm="ngForm">
         <mat-form-field class="form_element">
             <input 
                 matInput
@@ -61,7 +61,7 @@
 </div>
 <app-details></app-details>
 <div class="container_button">
-    <button [disabled]="" mat-raised-button color="primary" type="submit">
+    <button [disabled]="!checkoutForm.form.valid" mat-raised-button color="primary" type="submit">
     Checkout 
     </button>
 </div>
