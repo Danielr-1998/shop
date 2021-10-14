@@ -73,8 +73,11 @@ export class CheckoutComponent implements OnInit {
 
   private prepareDetails(){
     const details: Details[] = [];
-    this.cart.forEach(res => {
-      console.log(res);
+    this.cart.forEach((product:product)=> {
+      const {id:productId, name:productName ,qty:quantity ,stock}= product;
+      details.push({productId,productName,quantity});
+      
+ 
     })
     return details;
   }
